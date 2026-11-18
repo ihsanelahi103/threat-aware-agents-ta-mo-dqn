@@ -1,0 +1,810 @@
+{
+ "tuned": {
+  "TROD": {
+   "h0": 0.05,
+   "thr": 0.5
+  },
+  "PCD-L": {
+   "tl": 0.6
+  },
+  "PCD-LC": {
+   "tl": 0.6,
+   "tc": 0.05
+  },
+  "CPV": {
+   "tl": 0.2,
+   "tc": 0.08
+  },
+  "CPV-H": {
+   "tl": 0.5,
+   "tc": 0.08
+  }
+ },
+ "per_log": [
+  {
+   "B0": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.0,
+    "all_detect": 0.0,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.0,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      0.0,
+      28
+     ],
+     "inconsistent": [
+      0.0,
+      13
+     ]
+    },
+    "latency_median_steps": NaN
+   },
+   "OURS": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 1.0,
+    "all_detect": 0.8916256157635468,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      1.0,
+      70
+     ],
+     "conf_falsify": [
+      1.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "TROD": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.08839779005524862,
+    "all_detect": 0.07881773399014778,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.014285714285714285,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      0.07142857142857142,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 1427.0
+   },
+   "TROD+H": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.23204419889502761,
+    "all_detect": 0.20689655172413793,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.014285714285714285,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 289.5
+   },
+   "PCD-L": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.08287292817679558,
+    "all_detect": 0.07389162561576355,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.0,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      0.07142857142857142,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 1427.0
+   },
+   "PCD-L+H": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.2265193370165746,
+    "all_detect": 0.2019704433497537,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.0,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 362.0
+   },
+   "PCD-LC": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.08287292817679558,
+    "all_detect": 0.07389162561576355,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.0,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      0.07142857142857142,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 1427.0
+   },
+   "PCD-LC+H": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.2265193370165746,
+    "all_detect": 0.2019704433497537,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.0,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 362.0
+   },
+   "CPV": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 10601.135190918474,
+    "eff_detect": 0.4654054701264047,
+    "all_detect": 0.4149674388811786,
+    "honest_fpr": 0.15144478844169248,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.10622699270437462,
+    "by_strategy": {
+     "label_flip": [
+      0.9156346749226008,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      0.29431114551083587,
+      28
+     ],
+     "inconsistent": [
+      0.9156346749226005,
+      13
+     ]
+    },
+    "latency_median_steps": 82.5
+   },
+   "CPV+H": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 10601.135190918474,
+    "eff_detect": 0.5745728067324632,
+    "all_detect": 0.512303832603822,
+    "honest_fpr": 0.15144478844169248,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.10622699270437462,
+    "by_strategy": {
+     "label_flip": [
+      0.9156346749226008,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      0.9156346749226005,
+      13
+     ]
+    },
+    "latency_median_steps": 82.5
+   },
+   "CPV-H": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.02063983488132095,
+    "eff_detect": 0.09974257222516804,
+    "all_detect": 0.0889330323781055,
+    "honest_fpr": 2.948547840188707e-07,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 2.068181897383784e-07,
+    "by_strategy": {
+     "label_flip": [
+      0.04347265221878225,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      0.07179713990859501,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 686.5
+   },
+   "CPV-H+H": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.02063983488132095,
+    "eff_detect": 0.24333196494649037,
+    "all_detect": 0.21696101308036825,
+    "honest_fpr": 2.948547840188707e-07,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 2.068181897383784e-07,
+    "by_strategy": {
+     "label_flip": [
+      0.04347265221878225,
+      70
+     ],
+     "conf_falsify": [
+      0.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 140.5
+   },
+   "OUB": {
+    "n_eff": 181,
+    "n_att": 203,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 1.0,
+    "all_detect": 1.0,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      1.0,
+      70
+     ],
+     "conf_falsify": [
+      1.0,
+      70
+     ],
+     "replay": [
+      1.0,
+      28
+     ],
+     "inconsistent": [
+      1.0,
+      13
+     ]
+    },
+    "latency_median_steps": 0.0
+   }
+  },
+  {
+   "B0": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.0,
+    "all_detect": 0.0,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.0,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      0.0,
+      38
+     ],
+     "inconsistent": [
+      0.0,
+      16
+     ]
+    },
+    "latency_median_steps": NaN
+   },
+   "OURS": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 1.0,
+    "all_detect": 0.8923076923076924,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      1.0,
+      57
+     ],
+     "conf_falsify": [
+      1.0,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "TROD": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.1206896551724138,
+    "all_detect": 0.1076923076923077,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.08771929824561403,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      0.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "TROD+H": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.3390804597701149,
+    "all_detect": 0.30256410256410254,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.08771929824561403,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "PCD-L": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.1206896551724138,
+    "all_detect": 0.1076923076923077,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.08771929824561403,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      0.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "PCD-L+H": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.3390804597701149,
+    "all_detect": 0.30256410256410254,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.08771929824561403,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "PCD-LC": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.1206896551724138,
+    "all_detect": 0.1076923076923077,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.08771929824561403,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      0.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "PCD-LC+H": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 0.3390804597701149,
+    "all_detect": 0.30256410256410254,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      0.08771929824561403,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "CPV": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 10601.135190918474,
+    "eff_detect": 0.46307960570798196,
+    "all_detect": 0.4132094943240454,
+    "honest_fpr": 0.15144478844169248,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.10621847794117002,
+    "by_strategy": {
+     "label_flip": [
+      0.9156346749226005,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      0.36143474010102655,
+      38
+     ],
+     "inconsistent": [
+      0.9156346749226005,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "CPV+H": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 10601.135190918474,
+    "eff_detect": 0.6025363866054589,
+    "all_detect": 0.5376478526633326,
+    "honest_fpr": 0.15144478844169248,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.10621847794117002,
+    "by_strategy": {
+     "label_flip": [
+      0.9156346749226005,
+      57
+     ],
+     "conf_falsify": [
+      0.0,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      0.9156346749226005,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "CPV-H": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 1.1811145510835914,
+    "eff_detect": 0.12141175284390827,
+    "all_detect": 0.1083366409991797,
+    "honest_fpr": 1.6873065015479876e-05,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 1.1834222244212127e-05,
+    "by_strategy": {
+     "label_flip": [
+      0.08808140061195299,
+      57
+     ],
+     "conf_falsify": [
+      0.0013391321440857046,
+      63
+     ],
+     "replay": [
+      0.000543153549508446,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "CPV-H+H": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 1.1811145510835914,
+    "eff_detect": 0.3396839377009122,
+    "all_detect": 0.3031025905638909,
+    "honest_fpr": 1.6873065015479876e-05,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 1.1834222244212127e-05,
+    "by_strategy": {
+     "label_flip": [
+      0.08808140061195299,
+      57
+     ],
+     "conf_falsify": [
+      0.0013391321440857046,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   },
+   "OUB": {
+    "n_eff": 174,
+    "n_att": 195,
+    "n_honest": 70000,
+    "honest_flags": 0.0,
+    "eff_detect": 1.0,
+    "all_detect": 1.0,
+    "honest_fpr": 0.0,
+    "byz_benign_fpr": 0.0,
+    "benign_fpr": 0.0,
+    "by_strategy": {
+     "label_flip": [
+      1.0,
+      57
+     ],
+     "conf_falsify": [
+      1.0,
+      63
+     ],
+     "replay": [
+      1.0,
+      38
+     ],
+     "inconsistent": [
+      1.0,
+      16
+     ]
+    },
+    "latency_median_steps": 0.0
+   }
+  }
+ ],
+ "extras": {}
+}

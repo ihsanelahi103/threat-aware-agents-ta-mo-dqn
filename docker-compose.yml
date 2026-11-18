@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  # ── FISCO BCOS Node 0 (RPC: 8545, P2P: 30300) ─────────────
+  fisco-node0:
+    image: ubuntu:22.04
+    container_name: fisco-node0
+    working_dir: /data
+    volumes:
+      - ./chain_data/node0:/data
+      - ./bin/fisco-bcos:/usr/local/bin/fisco-bcos:ro
+    command: /usr/local/bin/fisco-bcos -c /data/config.ini -g /data/config.genesis
+    networks:
+      fisco-net:
+        ipv4_address: 172.25.0.10
+    ports:
+      - "8545:8545"
+      - "30300:30300"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "cat /proc/net/tcp | grep -q '2161'"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+  # ── FISCO BCOS Node 1 (RPC: 8546, P2P: 30301) ─────────────
+  fisco-node1:
+    image: ubuntu:22.04
+    container_name: fisco-node1
+    working_dir: /data
+    volumes:
+      - ./chain_data/node1:/data
+      - ./bin/fisco-bcos:/usr/local/bin/fisco-bcos:ro
+    command: /usr/local/bin/fisco-bcos -c /data/config.ini -g /data/config.genesis
+    networks:
+      fisco-net:
+        ipv4_address: 172.25.0.11
+    ports:
+      - "8546:8546"
+      - "30301:30301"
+    restart: unless-stopped
+
+  # ── FISCO BCOS Node 2 (RPC: 8547, P2P: 30302) ─────────────
+  fisco-node2:
+    image: ubuntu:22.04
+    container_name: fisco-node2
+    working_dir: /data
+    volumes:
+      - ./chain_data/node2:/data
+      - ./bin/fisco-bcos:/usr/local/bin/fisco-bcos:ro
+    command: /usr/local/bin/fisco-bcos -c /data/config.ini -g /data/config.genesis
+    networks:
+      fisco-net:
+        ipv4_address: 172.25.0.12
+    ports:
+      - "8547:8547"
+      - "30302:30302"
+    restart: unless-stopped
+
+  # ── FISCO BCOS Node 3 (RPC: 8548, P2P: 30303) ─────────────
+  fisco-node3:
+    image: ubuntu:22.04
+    container_name: fisco-node3
+    working_dir: /data
+    volumes:
+      - ./chain_data/node3:/data
+      - ./bin/fisco-bcos:/usr/local/bin/fisco-bcos:ro
+    command: /usr/local/bin/fisco-bcos -c /data/config.ini -g /data/config.genesis
+    networks:
+      fisco-net:
+        ipv4_address: 172.25.0.13
+    ports:
+      - "8548:8548"
+      - "30303:30303"
+    restart: unless-stopped
+
+  # ── Agents Experiment Runner ────────────────────────────
+  Agents:
+    image: Agents-with-torch:latest
+    container_name: Agents-runner
+    ports:
+      - "5002:5002"
+    working_dir: /app
+    volumes:
+      - ./results:/app/results
+      - ./plots:/app/plots
+    networks:
+      fisco-net:
+        ipv4_address: 172.25.0.20
+    depends_on:
+      fisco-node0:
+        condition: service_healthy
+    environment:
+      - RPC_URL=https://172.25.0.10:8545
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+networks:
+  fisco-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
