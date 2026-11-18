@@ -9,4 +9,3 @@ Code and result logs for the double-blind submission.
 - `requirements.txt`: Python dependencies.
 
 Run the ledger with `docker compose up -d`, then start the experiment script. Seeds are command-line arguments.
-# threat-aware-agents-ta-mo-dqn
